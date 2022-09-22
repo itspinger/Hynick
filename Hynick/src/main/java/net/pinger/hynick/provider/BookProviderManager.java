@@ -25,45 +25,15 @@
 
 package net.pinger.hynick.provider;
 
-import net.md_5.bungee.api.chat.BaseComponent;
-
-import net.pinger.hynick.book.Book;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
-
-/**
- * This class is a type that tries to utilize reflection in order to open
- * different {@link Book books}.
- * <p>
- * It is designed this way, because prior to 1.12.2, there was no method in the api
- * that allowed opening books with different {@link BaseComponent components}, or
- * even opening books.
- * <p>
- * Opening books was introduced into the api in 1.14.2 as per
- * <a href = "https://helpch.at/docs/1.14.2/org/bukkit/entity/Player.html">this link</a>
- *
- * @author Pinger
- * @since 1.0.0
- */
-
-public interface BookProvider {
+public interface BookProviderManager {
 
     /**
-     * This method attempts to open a {@link Book} for the specified player.
+     * This method returns a correct provider for this spigot version, used for opening
+     * different types of books.
      *
-     * @param player the player to open the book for
-     * @param book the book to open
+     * @return the correct {@link BookProvider} instance
      */
 
-    void openBook(Player player, Book book);
-
-    /**
-     * This method attempts to open a {@link ItemStack book} for the specified player.
-     *
-     * @param player the player to open the book for
-     * @param book the book to open
-     */
-
-    void openBook(Player player, ItemStack book);
+    BookProvider getProvider();
 
 }

@@ -25,14 +25,26 @@
 
 package net.pinger.hynick.book;
 
+import javax.annotation.Nonnull;
+
+import java.util.List;
 import java.util.UUID;
 
 public interface Book {
 
     /**
+     * This method returns the main title of this book, and it should never be null.
+     *
+     * @return the title of this book
+     */
+
+    @Nonnull
+    String getTitle();
+
+    /**
      * This method returns the {@link BookPage page} at the specified index.
      * <p>
-     * If the specified index is an invalid one: less than 1 or more than the amount from {@link #getPages()},
+     * If the specified index is an invalid one: less than 1 or more than the amount from {@link #getPageCount()} ()},
      * this method will throw a {@link IllegalArgumentException}.
      *
      * @throws IllegalArgumentException if the page is out of bounds.
@@ -53,7 +65,15 @@ public interface Book {
      * @return the amount of pages within this book
      */
 
-    int getPages();
+    int getPageCount();
+
+    /**
+     * This method returns a list of all {@link BookPage pages} within this book.
+     *
+     * @return the pages within this book
+     */
+
+    List<BookPage> getPages();
 
     /**
      * This method returns the unique identifier of this book, which
@@ -68,6 +88,18 @@ public interface Book {
 
     default UUID getId() {
         return UUID.randomUUID();
+    }
+
+    /**
+     * Returns the default author of each book. We need this in order to open
+     * each book, so this one is the default value.
+     *
+     * @return the author
+     */
+
+    @Nonnull
+    default String getAuthor() {
+        return "Pinger";
     }
 
 }

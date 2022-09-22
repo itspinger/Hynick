@@ -25,5 +25,4 @@ package net.pinger.hynick;
 
 public class HynickAPI {
 
-
 }

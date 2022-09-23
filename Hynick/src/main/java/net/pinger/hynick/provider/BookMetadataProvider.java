@@ -43,4 +43,13 @@ public @interface BookMetadataProvider {
 
     String version();
 
+    /**
+     * Returns an array of versions the provider is also compatible with,
+     * alongside the {@link #version()} version.
+     *
+     * @return the compatibility array
+     */
+
+    String[] compatibility();
+
 }

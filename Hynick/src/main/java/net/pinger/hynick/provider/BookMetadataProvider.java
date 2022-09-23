@@ -50,6 +50,6 @@ public @interface BookMetadataProvider {
      * @return the compatibility array
      */
 
-    String[] compatibility();
+    String[] compatibility() default "";
 
 }

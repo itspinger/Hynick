@@ -25,6 +25,8 @@
 
 package net.pinger.hynick.book;
 
+import net.pinger.hynick.view.BookView;
+
 import javax.annotation.Nonnull;
 
 import java.util.List;
@@ -40,6 +42,15 @@ public interface Book {
 
     @Nonnull
     String getTitle();
+
+    /**
+     * This method returns the view this book is in.
+     *
+     * @see BookView
+     * @return the view
+     */
+
+    BookView getView();
 
     /**
      * This method returns the {@link BookPage page} at the specified index.

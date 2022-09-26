@@ -43,13 +43,13 @@ public interface BookPage {
     Book getBook();
 
     /**
-     * This method returns the {@link BaseComponent component} that contains
+     * This method returns {@link BaseComponent components} that contain
      * the raw data of this page.
      *
      * @return the component
      */
 
     @Nonnull
-    BaseComponent getComponent();
+    BaseComponent[] getComponents();
 
 }

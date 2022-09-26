@@ -23,33 +23,35 @@
  *
  */
 
-package net.pinger.hynick.book;
+package net.pinger.hynick.player;
 
-import net.md_5.bungee.api.chat.BaseComponent;
+import net.pinger.hynick.view.BookView;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
+import java.util.UUID;
 
-public interface BookPage {
+public interface HynickPlayer {
 
     /**
-     * Returns the {@link Book book} this page is a part of.
-     * <p>
-     * This method will never return null, since for a {@link BookPage book page} to exist,
-     * it needs to be a part of a book.
+     * This method returns the current {@link BookView view} of this player.
      *
-     * @return the book
+     * <p>
+     * If there is no view opened for this player, this will return null.
+     *
+     * @return the current view of this player
      */
 
-    Book getBook();
+    @Nullable
+    BookView getView();
 
     /**
-     * This method returns the {@link BaseComponent component} that contains
-     * the raw data of this page.
+     * This method returns the {@link UUID} of this player, which may not be null.
      *
-     * @return the component
+     * @return the uuid of the player
      */
 
     @Nonnull
-    BaseComponent getComponent();
+    UUID getId();
 
 }

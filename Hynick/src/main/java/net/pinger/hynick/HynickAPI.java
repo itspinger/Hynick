@@ -29,6 +29,19 @@ import org.slf4j.LoggerFactory;
 public class HynickAPI {
 
     private static final Logger logger = LoggerFactory.getLogger("Hynick");
+    private static Hynick hynick;
+
+    public static void setHynick(Hynick hynick) {
+        if (HynickAPI.hynick != null) {
+            throw new IllegalArgumentException("HynickAPI already has a hynick instance.");
+        }
+
+        HynickAPI.hynick = hynick;
+    }
+
+    public static FeatureManager getFeatureManager() {
+        return hynick.getFeatureManager();
+    }
 
     public static Logger getLogger() {
         return logger;

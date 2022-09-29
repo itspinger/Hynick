@@ -24,8 +24,16 @@
 
 package net.pinger.hynick.view.simplified;
 
+import net.pinger.hynick.book.simplified.SimplifiedBookPage;
+
 public interface SimplifiedBookView {
 
+    SimplifiedBookPage getDefaultPage();
 
+    SimplifiedBookPage getRankPage();
+
+    SimplifiedBookPage getSkinPage();
+
+    SimplifiedBookPage getNamePage();
 
 }

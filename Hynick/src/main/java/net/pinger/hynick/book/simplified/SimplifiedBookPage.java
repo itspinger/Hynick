@@ -26,7 +26,6 @@ package net.pinger.hynick.book.simplified;
 
 import net.pinger.hynick.book.component.BookComponent;
 
-import java.util.List;
 import java.util.Map;
 
 public interface SimplifiedBookPage {
@@ -38,19 +37,6 @@ public interface SimplifiedBookPage {
      * @return the key components
      */
 
-    Map<String, BookComponent> getKeyComponents();
-
-    /**
-     * This method returns the components that are of lower value than the {@link #getKeyComponents()}
-     * method, and don't need any key that represents them.
-     *
-     * <p>
-     * Do note that this method might be changed in the future, and implemented
-     * within the
-     *
-     * @return the components
-     */
-
-    List<BookComponent> getComponents();
+    Map<String, BookComponent> getComponents();
 
 }

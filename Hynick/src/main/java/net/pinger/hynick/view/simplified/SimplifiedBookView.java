@@ -36,4 +36,8 @@ public interface SimplifiedBookView {
 
     SimplifiedBookPage getNamePage();
 
+    SimplifiedBookPage getRetryNamePage();
+
+    SimplifiedBookPage getFinishPage();
+
 }

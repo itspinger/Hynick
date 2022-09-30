@@ -42,7 +42,21 @@ public interface FeatureManager {
      * feature manager.
      *
      * @see #registerFeature(HynickFeature...)
+     * @see HynickFeature#load()
+     * @see #reload()
      */
 
     void load();
+
+    /**
+     * This method reloads all features that are currently registered under this
+     * feature manager.
+     *
+     * @see #registerFeature(HynickFeature...)
+     * @see HynickFeature#reload()
+     * @see #load()
+     */
+
+    void reload();
+
 }

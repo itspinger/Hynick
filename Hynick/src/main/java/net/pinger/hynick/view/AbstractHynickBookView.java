@@ -26,7 +26,7 @@ package net.pinger.hynick.view;
 
 import net.pinger.hynick.view.simplified.SimplifiedBookView;
 
-public abstract class AbstractBookView implements HynickBookView {
+public abstract class AbstractHynickBookView implements HynickBookView {
 
     protected final SimplifiedBookView simplifiedView;
 
@@ -38,7 +38,7 @@ public abstract class AbstractBookView implements HynickBookView {
      * @param simplifiedView the simplified view
      */
 
-    protected AbstractBookView(SimplifiedBookView simplifiedView) {
+    protected AbstractHynickBookView(SimplifiedBookView simplifiedView) {
         this.simplifiedView = simplifiedView;
     }
 

@@ -24,9 +24,12 @@
 
 package net.pinger.hynick.book;
 
+
 import net.pinger.hynick.book.simplified.SimplifiedBookPage;
 
-public abstract class AbstractBook implements BookPage {
+import javax.annotation.Nonnull;
+
+public abstract class AbstractBook implements Book {
 
     protected final SimplifiedBookPage simplifiedPage;
 
@@ -43,6 +46,9 @@ public abstract class AbstractBook implements BookPage {
 
     protected AbstractBook(SimplifiedBookPage simplifiedPage) {
         this.simplifiedPage = simplifiedPage;
+
+        // Build here
+        this.build();
     }
 
     /**
@@ -54,6 +60,22 @@ public abstract class AbstractBook implements BookPage {
 
     public SimplifiedBookPage getSimplifiedPage() {
         return simplifiedPage;
+    }
+
+    /**
+     * This method builds this book. It is called instantly when the instance
+     * of this object is created.
+     *
+     * @see AbstractBook
+     * @see Book
+     */
+
+    protected abstract void build();
+
+    @Nonnull
+    @Override
+    public String getTitle() {
+        return "N/A";
     }
 }
 

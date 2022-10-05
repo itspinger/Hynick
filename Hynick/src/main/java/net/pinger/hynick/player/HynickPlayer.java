@@ -26,6 +26,7 @@
 package net.pinger.hynick.player;
 
 import net.pinger.hynick.view.BookView;
+import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -53,5 +54,18 @@ public interface HynickPlayer {
 
     @Nonnull
     UUID getId();
+
+    /**
+     * This method returns the {@link Player} bukkit player fetched
+     * from the {@link #getId() id} of the player.
+     *
+     * <p>
+     * If the player fetched from the id is not online,
+     * this method will return null.
+     *
+     * @return the bukkit instance of the player
+     */
+
+    Player bukkit();
 
 }

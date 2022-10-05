@@ -26,6 +26,7 @@
 package net.pinger.hynick.view;
 
 import net.pinger.hynick.book.Book;
+import net.pinger.hynick.player.HynickPlayer;
 
 import java.util.Iterator;
 
@@ -46,6 +47,14 @@ import java.util.Iterator;
  */
 
 public interface BookView extends Iterator<Book> {
+
+    /**
+     * This method returns the {@link HynickPlayer} player using view.
+     *
+     * @return the player using this view
+     */
+
+    HynickPlayer getPlayer();
 
     /**
      * This method adds a page to this {@link BookView view}.

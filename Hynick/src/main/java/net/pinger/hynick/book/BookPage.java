@@ -25,7 +25,6 @@
 
 package net.pinger.hynick.book;
 
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.pinger.hynick.book.component.BookComponent;
 
 import javax.annotation.Nonnull;
@@ -52,7 +51,7 @@ public interface BookPage {
     Book getBook();
 
     /**
-     * This method returns {@link BaseComponent components} that contain
+     * This method returns {@link BookComponent components} that contain
      * the raw data of this page.
      *
      * @return the component

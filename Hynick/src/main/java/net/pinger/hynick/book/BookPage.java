@@ -59,6 +59,6 @@ public interface BookPage {
      */
 
     @Nonnull
-    BaseComponent[] getComponents();
+    BookComponent[] getComponents();
 
 }

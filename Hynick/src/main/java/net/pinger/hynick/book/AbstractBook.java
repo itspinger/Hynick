@@ -26,12 +26,17 @@ package net.pinger.hynick.book;
 
 
 import net.pinger.hynick.book.simplified.SimplifiedBookPage;
+import net.pinger.hynick.view.BookView;
 
 import javax.annotation.Nonnull;
+import java.util.LinkedList;
+import java.util.List;
 
 public abstract class AbstractBook implements Book {
 
+    protected final List<BookPage> pages = new LinkedList<>();
     protected final SimplifiedBookPage simplifiedPage;
+    protected final BookView view;
 
     /**
      * This constructor creates a {@link AbstractBook book} from the
@@ -44,7 +49,8 @@ public abstract class AbstractBook implements Book {
      * @param simplifiedPage the simplified page
      */
 
-    protected AbstractBook(SimplifiedBookPage simplifiedPage) {
+    protected AbstractBook(BookView view, SimplifiedBookPage simplifiedPage) {
+        this.view = view;
         this.simplifiedPage = simplifiedPage;
 
         // Build here
@@ -71,6 +77,21 @@ public abstract class AbstractBook implements Book {
      */
 
     protected abstract void build();
+
+    @Override
+    public BookPage getPage(int page) {
+        return this.pages.get(page - 1);
+    }
+
+    @Override
+    public int getPageCount() {
+        return this.pages.size();
+    }
+
+    @Override
+    public List<BookPage> getPages() {
+        return this.pages;
+    }
 
     @Nonnull
     @Override

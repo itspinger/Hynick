@@ -26,10 +26,19 @@
 package net.pinger.hynick.book;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import net.pinger.hynick.book.component.BookComponent;
 
 import javax.annotation.Nonnull;
 
 public interface BookPage {
+
+    /**
+     * This method adds defined components to the {@link BookPage} book page.
+     *
+     * @param components adds components to this page
+     */
+
+    void addComponent(BookComponent... components);
 
     /**
      * Returns the {@link Book book} this page is a part of.

@@ -35,7 +35,7 @@ import java.util.List;
 public abstract class AbstractBook implements Book {
 
     protected final List<BookPage> pages = new LinkedList<>();
-    protected final SimplifiedBookPage simplifiedPage;
+    protected final SimplifiedBookPage page;
     protected final BookView view;
 
     /**
@@ -51,7 +51,7 @@ public abstract class AbstractBook implements Book {
 
     protected AbstractBook(BookView view, SimplifiedBookPage simplifiedPage) {
         this.view = view;
-        this.simplifiedPage = simplifiedPage;
+        this.page = simplifiedPage;
 
         // Build here
         this.build();
@@ -64,8 +64,8 @@ public abstract class AbstractBook implements Book {
      * @return the simplified page
      */
 
-    public SimplifiedBookPage getSimplifiedPage() {
-        return simplifiedPage;
+    public SimplifiedBookPage getPage() {
+        return page;
     }
 
     /**
@@ -91,6 +91,11 @@ public abstract class AbstractBook implements Book {
     @Override
     public List<BookPage> getPages() {
         return this.pages;
+    }
+
+    @Override
+    public BookView getView() {
+        return this.view;
     }
 
     @Nonnull

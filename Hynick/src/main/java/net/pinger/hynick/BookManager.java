@@ -25,7 +25,22 @@
 
 package net.pinger.hynick;
 
+import net.pinger.hynick.book.Book;
+import net.pinger.hynick.view.BookView;
+
 public interface BookManager {
+
+    /**
+     * This method creates an empty {@link BookView view}.
+     *
+     * <p>
+     * The view won't have any pages, and those will have to be added
+     * from {@link BookView#addBook(Book)}
+     *
+     * @return the empty view
+     */
+
+    BookView createEmptyView();
 
 
 

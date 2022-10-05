@@ -48,6 +48,14 @@ import java.util.Iterator;
 public interface BookView extends Iterator<Book> {
 
     /**
+     * This method adds a page to this {@link BookView view}.
+     *
+     * @param page the page
+     */
+
+    void addBook(Book page);
+
+    /**
      * This method returns the current {@link Book book} in the player's view.
      *
      * @return the current book in the view

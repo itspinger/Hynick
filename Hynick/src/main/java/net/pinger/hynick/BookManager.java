@@ -27,6 +27,7 @@ package net.pinger.hynick;
 
 import net.pinger.hynick.book.Book;
 import net.pinger.hynick.view.BookView;
+import net.pinger.hynick.view.simplified.SimplifiedBookView;
 
 public interface BookManager {
 
@@ -42,6 +43,13 @@ public interface BookManager {
 
     BookView createEmptyView();
 
+    /**
+     * This method returns a default {@link SimplifiedBookView} instance.
+     *
+     * @return the view
+     */
+
+    SimplifiedBookView getSimplifiedView();
 
 
 }

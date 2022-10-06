@@ -28,6 +28,7 @@ package net.pinger.hynick.book;
 import net.pinger.hynick.book.component.BookComponent;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public interface BookPage {
 
@@ -59,5 +60,14 @@ public interface BookPage {
 
     @Nonnull
     BookComponent[] getComponents();
+
+    /**
+     * This method returns list of all components within this page,
+     * collected within a {@link List list}.
+     *
+     * @return the list of all components
+     */
+
+    List<BookComponent> getComponentsAsList();
 
 }

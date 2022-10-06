@@ -47,6 +47,14 @@ public interface HynickPlayer {
     BookView getView();
 
     /**
+     * This method overrides the {@link #getView() current view} of the player.
+     *
+     * @param view the view to override with
+     */
+
+    void setView(BookView view);
+
+    /**
      * This method returns the {@link UUID} of this player, which may not be null.
      *
      * @return the uuid of the player

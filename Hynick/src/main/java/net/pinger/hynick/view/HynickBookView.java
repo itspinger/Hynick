@@ -28,64 +28,6 @@ import net.pinger.hynick.book.Book;
 
 public interface HynickBookView extends BookView {
 
-    /**
-     * This method returns {@link Book the default book}
-     * where the user confirms that they want to change their skin and nick.
-     *
-     * @return the default page
-     */
-
-    Book getDefaultBook();
-
-    /**
-     * This method returns {@link Book the book page}
-     * where the user chooses the rank they want to be disguised with.
-     *
-     * <p>
-     * If this player can't choose any ranks, this view will add
-     * a default rank instead.
-     *
-     * @return the rank
-     */
-
-    Book getRankBook();
-
-    /**
-     * This method returns {@link Book the skin book}
-     * where the user chooses the skin they want to be disguised with.
-     *
-     * @return the skin book
-     */
-
-    Book getSkinBook();
-
-    /**
-     * This method returns {@link Book the name book}
-     * where the user chooses the username they want to be disguised with.
-     *
-     * @return the name book
-     */
-
-    Book getNameBook();
-
-    /**
-     * This method returns {@link Book the retry name book}
-     * where the user can choose another name, if they didn't like the generated one.
-     *
-     * @return the retry page
-     */
-
-    Book getRetryNameBook();
-
-    /**
-     * This method returns {@link Book the finish book}
-     * where the user finished selecting their book.
-     *
-     * @return the book
-     */
-
-    Book getFinishBook();
-
     @Override
     default void addBook(Book page) {
         throw new IllegalArgumentException("Can't add book to this view");

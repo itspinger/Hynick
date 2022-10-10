@@ -31,12 +31,14 @@ import net.pinger.hynick.view.BookView;
 import javax.annotation.Nonnull;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 public abstract class AbstractBook implements Book {
 
     protected final List<BookPage> pages = new LinkedList<>();
     protected final SimplifiedBookPage page;
     protected final BookView view;
+    private final UUID id = UUID.randomUUID();
 
     /**
      * This constructor creates a {@link AbstractBook book} from the
@@ -99,6 +101,11 @@ public abstract class AbstractBook implements Book {
     @Override
     public String getTitle() {
         return "N/A";
+    }
+
+    @Override
+    public UUID getId() {
+        return this.id;
     }
 }
 

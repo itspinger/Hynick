@@ -48,6 +48,11 @@ class HynickBookViewTest {
             }
 
             @Override
+            public List<Book> getBooks() {
+                return null;
+            }
+
+            @Override
             public boolean hasNext() {
                 return false;
             }

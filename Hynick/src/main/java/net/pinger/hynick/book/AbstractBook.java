@@ -52,9 +52,6 @@ public abstract class AbstractBook implements Book {
     protected AbstractBook(BookView view, SimplifiedBookPage simplifiedPage) {
         this.view = view;
         this.page = simplifiedPage;
-
-        // Build here
-        this.build();
     }
 
     /**
@@ -76,7 +73,7 @@ public abstract class AbstractBook implements Book {
      * @see Book
      */
 
-    protected abstract void build();
+    public abstract void build();
 
     @Override
     public BookPage getPage(int page) {

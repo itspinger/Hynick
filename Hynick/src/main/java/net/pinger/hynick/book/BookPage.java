@@ -25,6 +25,7 @@
 
 package net.pinger.hynick.book;
 
+import net.md_5.bungee.api.chat.TextComponent;
 import net.pinger.hynick.book.component.BookComponent;
 
 import javax.annotation.Nonnull;
@@ -60,6 +61,15 @@ public interface BookPage {
 
     @Nonnull
     BookComponent[] getComponents();
+
+    /**
+     * This method transforms the {@link BookComponent components} to
+     * {@link TextComponent text} components.
+     *
+     * @return the text components
+     */
+
+    TextComponent[] getAsTextComponents();
 
     /**
      * This method returns list of all components within this page,

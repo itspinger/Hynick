@@ -29,6 +29,7 @@ import net.pinger.hynick.book.Book;
 import net.pinger.hynick.player.HynickPlayer;
 
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Represents a view of multiple {@link Book books}. Useful for taking advantage
@@ -71,5 +72,14 @@ public interface BookView extends Iterator<Book> {
      */
 
     Book current();
+
+    /**
+     * This method returns all {@link Book books} this view
+     * contains.
+     *
+     * @return books this view contains
+     */
+
+    List<Book> getBooks();
 
 }

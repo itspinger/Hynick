@@ -27,8 +27,12 @@ package net.pinger.hynick;
 
 import net.pinger.hynick.book.Book;
 import net.pinger.hynick.factory.BookFactory;
+import net.pinger.hynick.player.HynickPlayer;
 import net.pinger.hynick.view.BookView;
 import net.pinger.hynick.book.BookPage;
+import net.pinger.hynick.view.HynickBookView;
+
+import java.util.UUID;
 
 public interface BookManager {
 
@@ -42,7 +46,7 @@ public interface BookManager {
      * @return the empty view
      */
 
-    BookView createEmptyView();
+    BookView createEmptyView(HynickPlayer player);
 
     /**
      * This method returns the factory where all {@link BookPage pages are added}
@@ -51,6 +55,26 @@ public interface BookManager {
      */
 
     BookFactory getFactory();
+
+    /**
+     * This method creates a new view for this player and opens it.
+     * <p>
+     * The view created is a {@link HynickBookView view type}.
+     *
+     * @param player the player to apply the view to
+     */
+
+    void applyView(HynickPlayer player);
+
+    /**
+     * This method opens a {@link Book book} with the id equivalent to the
+     * id specified in the parameters.
+     *
+     * @param player the player to open the book for
+     * @param id the id of the player
+     */
+
+    void openBook(HynickPlayer player, UUID id);
 
 
 }

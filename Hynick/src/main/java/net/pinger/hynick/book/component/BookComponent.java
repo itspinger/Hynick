@@ -25,6 +25,7 @@
 package net.pinger.hynick.book.component;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.TextComponent;
 
 public class BookComponent extends BaseComponent {
 
@@ -59,5 +60,11 @@ public class BookComponent extends BaseComponent {
     @Override
     public BaseComponent duplicate() {
         return new BookComponent(this.text, this.clickable);
+    }
+
+    public TextComponent toComponent() {
+        TextComponent component = new TextComponent(this.text);
+        component.setClickEvent(this.getClickEvent());
+        return component;
     }
 }

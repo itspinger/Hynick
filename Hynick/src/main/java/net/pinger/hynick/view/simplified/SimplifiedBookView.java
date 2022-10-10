@@ -28,15 +28,27 @@ import net.pinger.hynick.book.simplified.SimplifiedBookPage;
 
 public interface SimplifiedBookView {
 
+    void setDefaultPage(SimplifiedBookPage page);
+
     SimplifiedBookPage getDefaultPage();
+
+    void setRankPage(SimplifiedBookPage page);
 
     SimplifiedBookPage getRankPage();
 
+    void setSkinPage(SimplifiedBookPage page);
+
     SimplifiedBookPage getSkinPage();
+
+    void setNamePage(SimplifiedBookPage page);
 
     SimplifiedBookPage getNamePage();
 
+    void setRetryNamePage(SimplifiedBookPage page);
+
     SimplifiedBookPage getRetryNamePage();
+
+    void setFinishPage(SimplifiedBookPage page);
 
     SimplifiedBookPage getFinishPage();
 

@@ -97,9 +97,7 @@ public interface Book {
      * @return the id of the book
      */
 
-    default UUID getId() {
-        return UUID.randomUUID();
-    }
+    UUID getId();
 
     /**
      * Returns the default author of each book. We need this in order to open

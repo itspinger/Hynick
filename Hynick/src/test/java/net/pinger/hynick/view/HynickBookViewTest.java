@@ -31,6 +31,7 @@ import org.junit.jupiter.api.Test;
 
 import javax.annotation.Nonnull;
 import java.util.List;
+import java.util.UUID;
 
 class HynickBookViewTest {
 
@@ -96,6 +97,11 @@ class HynickBookViewTest {
 
         @Override
         public List<BookPage> getPages() {
+            return null;
+        }
+
+        @Override
+        public UUID getId() {
             return null;
         }
     }

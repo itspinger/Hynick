@@ -24,6 +24,7 @@
 
 package net.pinger.hynick.factory;
 
+import net.pinger.hynick.book.simplified.SimplifiedBookPage;
 import net.pinger.hynick.book.BookPage;
 
 public interface BookFactory {
@@ -39,9 +40,13 @@ public interface BookFactory {
     void loadPages();
 
     /**
-     * This method saves all {@link BookPage pages} under the pages.json file.
+     * This method saves the default page ({@link SimplifiedBookPage page}) to the pages.json
+     * file.
+     *
+     * <p>
+     * This method is only used if this file doesn't exist currently.
      */
 
-    void savePages();
+    void saveDefaultPages();
 
 }

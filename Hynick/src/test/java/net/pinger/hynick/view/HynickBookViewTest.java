@@ -39,6 +39,11 @@ class HynickBookViewTest {
     void testAddBook() {
         HynickBookView view = new HynickBookView() {
             @Override
+            public Book getBook(int index) {
+                return null;
+            }
+
+            @Override
             public HynickPlayer getPlayer() {
                 return null;
             }

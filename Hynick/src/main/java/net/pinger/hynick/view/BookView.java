@@ -50,6 +50,15 @@ import java.util.List;
 public interface BookView extends Iterator<Book> {
 
     /**
+     * This method returns a {@link Book} located at the specified index.
+     *
+     * @param index the index
+     * @return the book at the index
+     */
+
+    Book getBook(int index);
+
+    /**
      * This method returns the {@link HynickPlayer} player using view.
      *
      * @return the player using this view

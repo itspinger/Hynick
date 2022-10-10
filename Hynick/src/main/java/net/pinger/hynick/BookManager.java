@@ -26,8 +26,9 @@
 package net.pinger.hynick;
 
 import net.pinger.hynick.book.Book;
+import net.pinger.hynick.factory.BookFactory;
 import net.pinger.hynick.view.BookView;
-import net.pinger.hynick.view.simplified.SimplifiedBookView;
+import net.pinger.hynick.book.BookPage;
 
 public interface BookManager {
 
@@ -44,12 +45,12 @@ public interface BookManager {
     BookView createEmptyView();
 
     /**
-     * This method returns a default {@link SimplifiedBookView} instance.
+     * This method returns the factory where all {@link BookPage pages are added}
      *
-     * @return the view
+     * @return the factory
      */
 
-    SimplifiedBookView getSimplifiedView();
+    BookFactory getFactory();
 
 
 }

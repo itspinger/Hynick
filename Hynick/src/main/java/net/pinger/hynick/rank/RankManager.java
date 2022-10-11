@@ -39,4 +39,18 @@ public interface RankManager {
 
     List<Rank> getAvailableRanks(Player player);
 
+    /**
+     * This method returns a {@link Rank rank} that matches
+     * the specified name.
+     *
+     * <p>
+     * If no rank {@link Rank#getName()} matches this name,
+     * this method will return null.
+     *
+     * @param name the name of the rank
+     * @return the rank if it exists, otherwise null
+     */
+
+    Rank getRank(String name);
+
 }

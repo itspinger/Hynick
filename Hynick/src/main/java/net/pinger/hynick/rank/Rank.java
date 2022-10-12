@@ -28,11 +28,13 @@ public class Rank {
 
     private final String name;
     private final String displayName;
+    private final String prefix;
     private final String permission;
 
-    public Rank(String name, String displayName, String permission) {
+    public Rank(String name, String displayName, String prefix, String permission) {
         this.name = name;
         this.displayName = displayName;
+        this.prefix = prefix;
         this.permission = permission;
     }
 
@@ -48,4 +50,7 @@ public class Rank {
         return permission;
     }
 
+    public String getPrefix() {
+        return prefix;
+    }
 }

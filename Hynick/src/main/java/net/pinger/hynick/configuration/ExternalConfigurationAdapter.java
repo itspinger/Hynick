@@ -34,7 +34,7 @@ import java.util.Map;
 public abstract class ExternalConfigurationAdapter extends HynickFeature {
 
     private final File file;
-    protected final YamlConfiguration configuration;
+    protected YamlConfiguration configuration;
 
     public ExternalConfigurationAdapter(JavaPlugin plugin, String name)  {
         this(plugin, name, false);

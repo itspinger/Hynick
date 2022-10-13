@@ -27,6 +27,7 @@ package net.pinger.hynick.factory;
 import net.pinger.disguise.Skin;
 import net.pinger.hynick.exception.DownloadFailedException;
 import net.pinger.hynick.exception.SaveFailedException;
+import net.pinger.hynick.skin.SkinWrapper;
 
 import javax.annotation.Nullable;
 
@@ -51,7 +52,7 @@ public interface SkinFactory {
      */
 
     @Nullable
-    Skin getRandomSkin();
+    SkinWrapper getRandomSkin();
 
     /**
      * This method is used to download the skin packs from both

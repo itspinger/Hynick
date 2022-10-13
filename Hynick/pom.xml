@@ -44,6 +44,14 @@
             <version>5.9.1</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- DisguiseAPI -->
+        <dependency>
+            <groupId>net.pinger.disguise</groupId>
+            <artifactId>API</artifactId>
+            <version>1.1.2</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
 </project>

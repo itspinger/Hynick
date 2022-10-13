@@ -24,7 +24,6 @@
 
 package net.pinger.hynick.factory;
 
-import net.pinger.disguise.Skin;
 import net.pinger.hynick.exception.DownloadFailedException;
 import net.pinger.hynick.exception.SaveFailedException;
 import net.pinger.hynick.skin.SkinWrapper;
@@ -42,13 +41,13 @@ import javax.annotation.Nullable;
 public interface SkinFactory {
 
     /**
-     * This method returns a random {@link Skin} picked
+     * This method returns a random {@link SkinWrapper} picked
      * from all cached skin packs.
      * <p>
      * In case no skin packs are cached, and therefore no cached skins exist,
      * this method will return null.
      *
-     * @return a {@link Skin} if it can be found
+     * @return a {@link SkinWrapper} if it can be found
      */
 
     @Nullable

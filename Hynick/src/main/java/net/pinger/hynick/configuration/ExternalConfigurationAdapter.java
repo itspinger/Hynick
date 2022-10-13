@@ -34,22 +34,33 @@ import java.util.Map;
 public abstract class ExternalConfigurationAdapter extends HynickFeature {
 
     private final File file;
-    private YamlConfiguration configuration;
+    protected YamlConfiguration configuration;
 
-    public ExternalConfigurationAdapter(JavaPlugin plugin, String resource)  {
+    public ExternalConfigurationAdapter(JavaPlugin plugin, String name)  {
+        this(plugin, name, false);
+    }
+
+    public ExternalConfigurationAdapter(JavaPlugin plugin, String name, boolean load) {
         super(plugin);
 
         // Create a file with this resource name
-        this.file = new File(plugin.getDataFolder(), resource);
+        this.file = new File(plugin.getDataFolder(), name);
+        this.configuration = YamlConfiguration.loadConfiguration(this.file);
+
+        // If the load is false
+        // We shouldn't replace if the file is not empty
+        if (!load && this.file.length() > 0) {
+            return;
+        }
 
         // Load resource by this name
         // And add the configuration section
-        InputStream inputStream = plugin.getResource(resource);
+        InputStream inputStream = plugin.getResource(name);
 
         // Throw IllegalArgumentException
         // If this file cannot be found
         if (inputStream == null) {
-            throw new IllegalArgumentException("File resource cannot be found (" + resource + ")");
+            throw new IllegalArgumentException("File resource cannot be found (" + name + ")");
         }
 
         // Try to read from the input stream
@@ -57,7 +68,10 @@ public abstract class ExternalConfigurationAdapter extends HynickFeature {
         try (Reader reader = new InputStreamReader(inputStream)) {
             // Load the configuration
             YamlConfiguration keyed = YamlConfiguration.loadConfiguration(reader);
-            this.configuration = YamlConfiguration.loadConfiguration(this.file);
+
+            // If we shouldn't copy the defaults, return here
+            // Copy the defaults
+            this.configuration.options().copyDefaults(true);
 
             // Try to add defaults from resourceConfig
             // To the main configuration, by looping over the keys
@@ -70,7 +84,7 @@ public abstract class ExternalConfigurationAdapter extends HynickFeature {
             // From the object
             this.configuration.save(this.file);
         } catch (IOException e) {
-            plugin.getLogger().info("Failed to create a file with name " + resource);
+            plugin.getLogger().info("Failed to create a file with name " + name);
         }
     }
 

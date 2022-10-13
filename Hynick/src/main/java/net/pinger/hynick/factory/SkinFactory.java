@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package net.pinger.hynick.skin;
+package net.pinger.hynick.factory;
 
 import net.pinger.disguise.Skin;
 import net.pinger.hynick.exception.DownloadFailedException;

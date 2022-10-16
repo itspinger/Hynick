@@ -25,6 +25,7 @@
 package net.pinger.hynick.book.component;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
 
@@ -58,6 +59,32 @@ public class ComponentBuilder {
     }
 
     /**
+     * This method sets a {@link ClickEvent} for this component.
+     *
+     * @param action the action
+     * @param text the text with the action
+     * @return this builder
+     */
+
+    public ComponentBuilder click(ClickEvent.Action action, String text) {
+        this.component.setClickEvent(new ClickEvent(action, text));
+        return this;
+    }
+
+    /**
+     * This method sets a {@link ClickEvent.Action#RUN_COMMAND run command}
+     * action with the specified text. If you instead need another action ran,
+     * when the command is clicked, you can use {@link #click(ClickEvent.Action, String)}.
+     *
+     * @param text the text
+     * @return this builder
+     */
+
+    public ComponentBuilder click(String text) {
+        return this.click(ClickEvent.Action.RUN_COMMAND, text);
+    }
+
+    /**
      * This method sets a new {@link HoverEvent} for the {@link #component component}.
      *
      * @param action the hover action
@@ -66,7 +93,7 @@ public class ComponentBuilder {
      */
 
     public ComponentBuilder hover(HoverEvent.Action action, String text) {
-        this.component.setHoverEvent(new HoverEvent(action, new BaseComponent[] { new TextComponent(text)}));
+        this.component.setHoverEvent(new HoverEvent(action, new BaseComponent[] { new TextComponent(text) }));
         return this;
     }
 

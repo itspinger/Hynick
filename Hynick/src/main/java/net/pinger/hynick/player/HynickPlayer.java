@@ -26,6 +26,7 @@
 package net.pinger.hynick.player;
 
 import net.pinger.hynick.HynickDisguise;
+import net.pinger.hynick.HynickDisguiseBuilder;
 import net.pinger.hynick.view.BookView;
 import org.bukkit.entity.Player;
 
@@ -36,12 +37,19 @@ import java.util.UUID;
 public interface HynickPlayer {
 
     /**
-     * This method sets the builder for this player.
+     * This method sets the {@link HynickDisguiseBuilder} for this player. If you want
+     * to create an empty builder for this player, use {@link #newBuilder()} method.
      *
-     * @param disguise the disguise builder
+     * @param builder the new builder
      */
 
-    void setBuilder(HynickDisguise disguise);
+    void setDisguiseBuilder(HynickDisguiseBuilder builder);
+
+    /**
+     * This method creates a new {@link HynickDisguiseBuilder} for this player.
+     */
+
+    void newBuilder();
 
     /**
      * This method returns the {@link HynickDisguise} which is still in its
@@ -51,7 +59,7 @@ public interface HynickPlayer {
      * @return the builder
      */
 
-    HynickDisguise getBuilder();
+    HynickDisguiseBuilder getBuilder();
 
     /**
      * This method sets the current disguise for this player.

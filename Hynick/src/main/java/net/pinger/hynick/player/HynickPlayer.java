@@ -25,6 +25,7 @@
 
 package net.pinger.hynick.player;
 
+import net.pinger.hynick.HynickDisguise;
 import net.pinger.hynick.view.BookView;
 import org.bukkit.entity.Player;
 
@@ -33,6 +34,44 @@ import javax.annotation.Nullable;
 import java.util.UUID;
 
 public interface HynickPlayer {
+
+    /**
+     * This method sets the builder for this player.
+     *
+     * @param disguise the disguise builder
+     */
+
+    void setBuilder(HynickDisguise disguise);
+
+    /**
+     * This method returns the {@link HynickDisguise} which is still in its
+     * build state. Once this builder is fully complete, this method will be set to null,
+     * and will become {@link #getDisguise()}.
+     *
+     * @return the builder
+     */
+
+    HynickDisguise getBuilder();
+
+    /**
+     * This method sets the current disguise for this player.
+     *
+     * @return disguise the current disguise
+     */
+
+    void setDisguise(HynickDisguise disguise);
+
+    /**
+     * This method returns the current {@link HynickDisguise disguise.}
+     *
+     * <p>
+     * Do note that this method may return null, depending on if the disguise
+     * is still active.
+     *
+     * @return the disguise
+     */
+
+    HynickDisguise getDisguise();
 
     /**
      * This method returns the current {@link BookView view} of this player.
@@ -64,7 +103,7 @@ public interface HynickPlayer {
     UUID getId();
 
     /**
-     * This method returns the {@link Player} bukkit player fetched
+     * This method returns the {@link Player bukkit player} fetched
      * from the {@link #getId() id} of the player.
      *
      * <p>

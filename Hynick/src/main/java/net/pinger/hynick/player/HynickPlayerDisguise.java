@@ -25,13 +25,25 @@
 package net.pinger.hynick.player;
 
 import net.pinger.hynick.HynickDisguise;
+import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.skin.SkinWrapper;
 
 public class HynickPlayerDisguise implements HynickDisguise {
 
     private boolean active;
+    private Rank rank;
     private SkinWrapper wrapper;
     private String name;
+
+    @Override
+    public Rank getRank() {
+        return this.rank;
+    }
+
+    @Override
+    public void setRank(Rank rank) {
+        this.rank = rank;
+    }
 
     @Override
     public void setName(String name) {

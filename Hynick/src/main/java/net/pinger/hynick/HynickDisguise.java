@@ -24,10 +24,27 @@
 
 package net.pinger.hynick;
 
-import net.pinger.hynick.player.HynickPlayer;
+import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.skin.SkinWrapper;
 
 public interface HynickDisguise {
+
+    /**
+     * This method returns the {@link Rank rank} chosen by the player
+     * and therefore saved in this wrapper.
+     *
+     * @return the rank
+     */
+
+    Rank getRank();
+
+    /**
+     * This method sets the {@link Rank rank} for this player.
+     *
+     * @param rank the rank
+     */
+
+    void setRank(Rank rank);
 
     /**
      * This method sets the name of this disguise.

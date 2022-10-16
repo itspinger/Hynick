@@ -25,11 +25,7 @@
 package net.pinger.hynick.book.component;
 
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
-import net.md_5.bungee.chat.ComponentSerializer;
-
-import java.util.List;
 
 public class BookComponent extends BaseComponent {
 

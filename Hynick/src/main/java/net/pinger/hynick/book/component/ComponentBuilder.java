@@ -24,7 +24,6 @@
 
 package net.pinger.hynick.book.component;
 
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -93,7 +92,7 @@ public class ComponentBuilder {
      */
 
     public ComponentBuilder hover(HoverEvent.Action action, String text) {
-        this.component.setHoverEvent(new HoverEvent(action, new BaseComponent[] { new TextComponent(text) }));
+        this.component.setHoverEvent(new HoverEvent(action, new TextComponent[] { new TextComponent(text) }));
         return this;
     }
 

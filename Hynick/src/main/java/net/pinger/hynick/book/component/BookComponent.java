@@ -25,7 +25,10 @@
 package net.pinger.hynick.book.component;
 
 import net.md_5.bungee.api.chat.BaseComponent;
+import net.md_5.bungee.api.chat.HoverEvent;
+import net.md_5.bungee.api.chat.HoverEvent.Action;
 import net.md_5.bungee.api.chat.TextComponent;
+import net.pinger.hynick.book.Book;
 
 public class BookComponent extends BaseComponent {
 
@@ -67,4 +70,5 @@ public class BookComponent extends BaseComponent {
         component.setClickEvent(this.getClickEvent());
         return component;
     }
+
 }

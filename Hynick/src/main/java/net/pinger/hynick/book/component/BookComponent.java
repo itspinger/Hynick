@@ -25,15 +25,18 @@
 package net.pinger.hynick.book.component;
 
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.api.chat.HoverEvent;
-import net.md_5.bungee.api.chat.HoverEvent.Action;
 import net.md_5.bungee.api.chat.TextComponent;
-import net.pinger.hynick.book.Book;
 
 public class BookComponent extends BaseComponent {
 
     private String text;
     private boolean clickable;
+
+    public BookComponent(BookComponent component) {
+        this.setText(component.text);
+        this.setClickable(component.clickable);
+        this.setHoverEvent(component.getHoverEvent());
+    }
 
     public BookComponent(String text, boolean clickable) {
         this.setText(text);
@@ -62,12 +65,13 @@ public class BookComponent extends BaseComponent {
 
     @Override
     public BaseComponent duplicate() {
-        return new BookComponent(this.text, this.clickable);
+        return new BookComponent(this);
     }
 
     public TextComponent toComponent() {
         TextComponent component = new TextComponent(this.text);
         component.setClickEvent(this.getClickEvent());
+        component.setHoverEvent(this.getHoverEvent());
         return component;
     }
 

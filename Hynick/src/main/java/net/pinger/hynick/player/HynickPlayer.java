@@ -63,8 +63,6 @@ public interface HynickPlayer {
 
     /**
      * This method sets the current disguise for this player.
-     *
-     * @return disguise the current disguise
      */
 
     void setDisguise(HynickDisguise disguise);
@@ -109,6 +107,50 @@ public interface HynickPlayer {
 
     @Nonnull
     UUID getId();
+
+    /**
+     * This method sends a message from the configuration file
+     * to this player.
+     * <p>
+     * Do not do this if you want to send a message that is not within the messages.yml file.
+     *
+     * @param key they key from the config
+     */
+
+    void sendMessage(String key);
+
+    /**
+     * This method sends a formatted message from the configuration file
+     * to this player.
+     * <p>
+     * Do not do this if you want to send a message that is not within the messages.yml file.
+     *
+     * @param key they key from the config
+     * @param format the objects to format
+     */
+
+    void sendMessage(String key, Object... format);
+
+    /**
+     * This messages sends a raw message to this player
+     * from the configuration.
+     *
+     * @param key the key from the config
+     */
+
+    void sendRawMessage(String key);
+
+    /**
+     * This method sends a raw formatted message from the configuration file
+     * to this player.
+     * <p>
+     * Do not do this if you want to send a message that is not within the messages.yml file.
+     *
+     * @param key they key from the config
+     * @param format the objects to format
+     */
+
+    void sendRawMessage(String key, Object... format);
 
     /**
      * This method returns the {@link Player bukkit player} fetched

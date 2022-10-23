@@ -24,15 +24,15 @@
 
 package net.pinger.hynick;
 
-public interface HynickDisguiseBuilder extends HynickDisguise {
+public interface HynickDisguiseBuilder extends HynickRecord {
 
     /**
-     * This method builds a regular {@link HynickDisguise} out of the
-     * data provided by the {@link HynickDisguise} interface.
+     * This method builds a regular {@link HynickRecord} out of the
+     * data provided by the {@link HynickRecord} interface.
      *
      * @return the disguise data
      */
 
-    HynickDisguise build();
+    HynickRecord build();
 
 }

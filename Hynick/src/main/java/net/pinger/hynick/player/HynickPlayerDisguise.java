@@ -24,11 +24,11 @@
 
 package net.pinger.hynick.player;
 
-import net.pinger.hynick.HynickDisguise;
+import net.pinger.hynick.HynickRecord;
 import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.skin.SkinWrapper;
 
-public class HynickPlayerDisguise implements HynickDisguise {
+public class HynickPlayerDisguise implements HynickRecord {
 
     private boolean active;
     private Rank rank;

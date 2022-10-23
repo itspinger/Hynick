@@ -25,7 +25,7 @@
 
 package net.pinger.hynick.player;
 
-import net.pinger.hynick.HynickDisguise;
+import net.pinger.hynick.HynickRecord;
 import net.pinger.hynick.HynickDisguiseBuilder;
 import net.pinger.hynick.view.BookView;
 import org.bukkit.entity.Player;
@@ -52,7 +52,7 @@ public interface HynickPlayer {
     void newBuilder();
 
     /**
-     * This method returns the {@link HynickDisguise} which is still in its
+     * This method returns the {@link HynickRecord} which is still in its
      * build state. Once this builder is fully complete, this method will be set to null,
      * and will become {@link #getDisguise()}.
      *
@@ -65,10 +65,10 @@ public interface HynickPlayer {
      * This method sets the current disguise for this player.
      */
 
-    void setDisguise(HynickDisguise disguise);
+    void setDisguise(HynickRecord disguise);
 
     /**
-     * This method returns the current {@link HynickDisguise disguise.}
+     * This method returns the current {@link HynickRecord disguise.}
      *
      * <p>
      * Do note that this method may return null, depending on if the disguise
@@ -77,7 +77,7 @@ public interface HynickPlayer {
      * @return the disguise
      */
 
-    HynickDisguise getDisguise();
+    HynickRecord getDisguise();
 
     /**
      * This method returns the current {@link BookView view} of this player.

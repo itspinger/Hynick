@@ -27,7 +27,7 @@ package net.pinger.hynick;
 import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.skin.SkinWrapper;
 
-public interface HynickDisguise {
+public interface HynickRecord {
 
     /**
      * This method returns the {@link Rank rank} chosen by the player

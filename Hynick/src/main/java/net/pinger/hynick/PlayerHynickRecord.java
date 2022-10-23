@@ -24,7 +24,18 @@
 
 package net.pinger.hynick;
 
-public interface HynickRecordBuilder extends HynickRecord {
+import net.pinger.hynick.player.HynickPlayer;
+
+public interface PlayerHynickRecord extends HynickRecord {
+
+    /**
+     * This method returns the {@link HynickPlayer} which receives
+     * the given record in their history.
+     *
+     * @return the player
+     */
+
+    HynickPlayer getPlayer();
 
     /**
      * This method builds a regular {@link HynickRecord} out of the

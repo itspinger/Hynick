@@ -24,15 +24,55 @@
 
 package net.pinger.hynick;
 
-public interface HynickDisguiseBuilder extends HynickRecord {
+import net.pinger.hynick.rank.Rank;
+import net.pinger.hynick.record.HynickDisguiseRecord;
+import net.pinger.hynick.skin.SkinWrapper;
 
-    /**
-     * This method builds a regular {@link HynickRecord} out of the
-     * data provided by the {@link HynickRecord} interface.
-     *
-     * @return the disguise data
-     */
+public abstract class AbstractHynickRecord implements HynickRecord, HynickRecordBuilder {
 
-    HynickRecord build();
+    private final HynickRecord record;
 
+    protected AbstractHynickRecord() {
+        this.record = new HynickDisguiseRecord();
+    }
+
+    @Override
+    public Rank getRank() {
+        return this.record.getRank();
+    }
+
+    @Override
+    public void setRank(Rank rank) {
+        this.record.setRank(rank);
+    }
+
+    @Override
+    public void setName(String name) {
+        this.record.setName(name);
+    }
+
+    @Override
+    public String getName() {
+        return this.record.getName();
+    }
+
+    @Override
+    public void setSkin(SkinWrapper wrapper) {
+        this.record.setSkin(wrapper);
+    }
+
+    @Override
+    public SkinWrapper getSkin() {
+        return this.record.getSkin();
+    }
+
+    @Override
+    public void setActive(boolean active) {
+        this.record.setActive(active);
+    }
+
+    @Override
+    public boolean isActive() {
+        return this.record.isActive();
+    }
 }

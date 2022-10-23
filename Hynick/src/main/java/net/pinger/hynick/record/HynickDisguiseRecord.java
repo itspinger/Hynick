@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package net.pinger.hynick.player;
+package net.pinger.hynick.record;
 
 import net.pinger.hynick.HynickRecord;
 import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.skin.SkinWrapper;
 
-public class HynickPlayerDisguise implements HynickRecord {
+public class HynickDisguiseRecord implements HynickRecord {
 
     private boolean active;
     private Rank rank;
@@ -46,7 +46,7 @@ public class HynickPlayerDisguise implements HynickRecord {
     }
 
     @Override
-    public void setName(String name) {
+    public void setName(String name){
         this.name = name;
     }
 

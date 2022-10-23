@@ -28,7 +28,7 @@ import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.record.HynickDisguiseRecord;
 import net.pinger.hynick.skin.SkinWrapper;
 
-public abstract class AbstractHynickRecord implements HynickRecord, HynickRecordBuilder {
+public abstract class AbstractHynickRecord implements HynickRecordBuilder {
 
     private final HynickRecord record;
 

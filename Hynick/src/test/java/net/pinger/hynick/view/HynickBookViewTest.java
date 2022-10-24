@@ -84,6 +84,11 @@ class HynickBookViewTest {
             return false;
         }
 
+        @Override
+        public void setViewed(boolean viewed) {
+
+        }
+
         @Nonnull
         @Override
         public String getTitle() {

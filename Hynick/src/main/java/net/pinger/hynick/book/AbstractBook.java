@@ -83,6 +83,7 @@ public abstract class AbstractBook implements Book {
         return viewed;
     }
 
+    @Override
     public void setViewed(boolean viewed) {
         if (this.viewed) {
             return;

@@ -24,8 +24,8 @@
 
 package net.pinger.hynick.factory;
 
-import net.pinger.hynick.exception.DownloadFailedException;
-import net.pinger.hynick.exception.SaveFailedException;
+import net.pinger.hynick.configuration.exception.DownloadFailedException;
+import net.pinger.hynick.configuration.exception.SaveFailedException;
 import net.pinger.hynick.skin.SkinWrapper;
 
 import javax.annotation.Nullable;

@@ -22,22 +22,23 @@
  * SOFTWARE.
  */
 
-package net.pinger.hynick.exception;
+package net.pinger.hynick.configuration.exception;
 
 /**
- * This type indicates that an error occurred while trying to
- * download something from the internet.
+ * This type indicates that a saving operation went unsuccessful.
  *
+ * @author itspinger
  * @since 1.0
  */
 
-public class DownloadFailedException extends RuntimeException {
+public class SaveFailedException extends RuntimeException {
 
-    public DownloadFailedException(String message) {
+    public SaveFailedException(String message) {
         super(message);
     }
 
-    public DownloadFailedException(String message, Throwable throwable) {
+    public SaveFailedException(String message, Throwable throwable) {
         super(message, throwable);
     }
+
 }

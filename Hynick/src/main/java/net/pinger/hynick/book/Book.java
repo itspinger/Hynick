@@ -48,6 +48,18 @@ public interface Book {
     boolean isViewed();
 
     /**
+     * This method sets whether this book should be flagged as viewed or not.
+     * <p>
+     * Do note that once {@link #isViewed()}} is set to true, this method
+     * should not be anymore used. You can prevent this by checking the return value
+     * of {@link #isViewed()}}, if it returns true, return without assigning another value.
+     *
+     * @param viewed the viewed boolean
+     */
+
+    void setViewed(boolean viewed);
+
+    /**
      * This method returns the main title of this book, and it should never be null.
      *
      * @return the title of this book

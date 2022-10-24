@@ -72,9 +72,10 @@ public interface BookManager {
      *
      * @param player the player to open the book for
      * @param id the id of the player
+     * @return true if the operation went successful, false if otherwise.
      */
 
-    void openBook(HynickPlayer player, UUID id);
+    boolean openBook(HynickPlayer player, UUID id);
 
 
 }

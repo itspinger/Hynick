@@ -39,6 +39,7 @@ public abstract class AbstractBook implements Book {
     protected final SimplifiedBookPage page;
     protected final BookView view;
     private final UUID id = UUID.randomUUID();
+    private boolean viewed = false;
 
     /**
      * This constructor creates a {@link AbstractBook book} from the
@@ -76,6 +77,19 @@ public abstract class AbstractBook implements Book {
      */
 
     public abstract void build();
+
+    @Override
+    public boolean isViewed() {
+        return viewed;
+    }
+
+    public void setViewed(boolean viewed) {
+        if (this.viewed) {
+            return;
+        }
+
+        this.viewed = viewed;
+    }
 
     @Override
     public BookPage getPage(int page) {

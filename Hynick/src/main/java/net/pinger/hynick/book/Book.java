@@ -35,6 +35,19 @@ import java.util.UUID;
 public interface Book {
 
     /**
+     * This method returns whether this book has already been viewed by the player.
+     * <p>
+     * This helps in preventing users from copying the data from console and
+     * reopening books multiple times.
+     * <p>
+     * TODO: Do some mind trick for NickPage as it may really need to be opened a bunch of times.
+     *
+     * @return the view
+     */
+
+    boolean isViewed();
+
+    /**
      * This method returns the main title of this book, and it should never be null.
      *
      * @return the title of this book

@@ -79,6 +79,11 @@ class HynickBookViewTest {
 
     static class BookImpl implements Book {
 
+        @Override
+        public boolean isViewed() {
+            return false;
+        }
+
         @Nonnull
         @Override
         public String getTitle() {

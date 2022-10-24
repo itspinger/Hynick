@@ -25,7 +25,6 @@
 
 package net.pinger.hynick.server;
 
-import net.pinger.hynick.utils.Arrays;
 import org.bukkit.Bukkit;
 
 import javax.annotation.Nonnull;
@@ -147,12 +146,48 @@ public final class MinecraftServer implements Comparable<MinecraftServer> {
 
     @Override
     public int compareTo(@Nonnull MinecraftServer o) {
-        return Arrays.compare(this.splitter, o.splitter);
+        return MinecraftServer.compare(this.splitter, o.splitter);
     }
 
     @Override
     public String toString() {
         return this.version;
+    }
+
+    /**
+     * This method compares two different arrays with the same generic type.
+     *
+     * @param a the first array
+     * @param b the second array
+     * @return the result of the comparison: more or equal to 1 is first is larger, less
+     *      or equal to -1 if the second is larger, and 0 if they are the same
+     * @param <T> the generic type of the arrays
+     */
+
+    private static <T extends Comparable<? super T>> int compare(T[] a, T[] b) {
+        if (a == b)
+            return 0;
+        // A null array is less than a non-null array
+        if (a == null || b == null)
+            return a == null ? -1 : 1;
+
+        int length = Math.min(a.length, b.length);
+        for (int i = 0; i < length; i++) {
+            T oa = a[i];
+            T ob = b[i];
+            if (oa != ob) {
+                // A null element is less than a non-null element
+                if (oa == null || ob == null)
+                    return oa == null ? -1 : 1;
+
+                int v = oa.compareTo(ob);
+                if (v != 0) {
+                    return v;
+                }
+            }
+        }
+
+        return a.length - b.length;
     }
 
 }

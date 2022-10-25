@@ -1,5 +1,7 @@
 # Hynick
 
+### User guide
+
 ### License
 ```
 MIT License

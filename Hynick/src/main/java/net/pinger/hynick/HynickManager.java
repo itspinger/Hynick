@@ -39,12 +39,12 @@ public interface HynickManager {
      * @param record the record of the player
      */
 
-    void updatePlayerFromRecord(HynickRecord record);
+    void updatePlayerFromRecord(PlayerHynickRecord record);
 
     /**
      * This method updates all player properties and creates an empty builder
      * for the specified player. If you instead have a {@link HynickRecord}
-     * which you need to update for the player, use {@link #updatePlayerFromRecord(HynickRecord)}
+     * which you need to update for the player, use {@link #updatePlayerFromRecord(PlayerHynickRecord)}
      * for that purpose.
      *
      * @param player the player to update

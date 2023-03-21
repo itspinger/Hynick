@@ -26,7 +26,9 @@ package net.pinger.hynick.book;
 
 
 import net.pinger.hynick.book.internal.InternalBookPage;
+import net.pinger.hynick.book.internal.PageType;
 import net.pinger.hynick.view.BookView;
+import net.pinger.hynick.view.internal.InternalBookView;
 
 import javax.annotation.Nonnull;
 import java.util.LinkedList;
@@ -44,17 +46,15 @@ public abstract class AbstractBook implements Book {
     /**
      * This constructor creates a {@link AbstractBook book} from the
      * {@link InternalBookPage} loaded from the pages.json file.
-     *
      * <p>
      * This makes it easier for localization of books.
-     * @see InternalBookPage
      *
-     * @param simplifiedPage the simplified page
+     * @param view the view
      */
 
-    protected AbstractBook(BookView view, InternalBookPage simplifiedPage) {
+    protected AbstractBook(BookView view) {
         this.view = view;
-        this.page = simplifiedPage;
+        this.page = view.getInternalView().getPage(this.getType());
         this.pages = new LinkedList<>();
         this.id = UUID.randomUUID();
     }
@@ -79,6 +79,15 @@ public abstract class AbstractBook implements Book {
      */
 
     public abstract void build();
+
+    /**
+     * This method returns the {@link PageType} of this
+     * page.
+     *
+     * @return the page type
+     */
+
+    public abstract PageType getType();
 
     @Override
     public boolean isViewed() {

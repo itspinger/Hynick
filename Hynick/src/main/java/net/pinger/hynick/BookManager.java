@@ -30,7 +30,6 @@ import net.pinger.hynick.factory.BookFactory;
 import net.pinger.hynick.player.HynickPlayer;
 import net.pinger.hynick.view.BookView;
 import net.pinger.hynick.book.BookPage;
-import net.pinger.hynick.view.HynickBookView;
 
 import java.util.UUID;
 

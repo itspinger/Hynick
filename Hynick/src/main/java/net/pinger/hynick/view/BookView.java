@@ -25,8 +25,10 @@
 
 package net.pinger.hynick.view;
 
+import net.pinger.hynick.book.AbstractBook;
 import net.pinger.hynick.book.Book;
 import net.pinger.hynick.player.HynickPlayer;
+import net.pinger.hynick.view.internal.InternalBookView;
 
 import java.util.Iterator;
 import java.util.List;
@@ -47,7 +49,7 @@ import java.util.List;
  * @since 1.0.0
  */
 
-public interface BookView extends Iterator<Book> {
+public interface BookView {
 
     /**
      * This method returns a {@link Book} located at the specified index.
@@ -67,28 +69,21 @@ public interface BookView extends Iterator<Book> {
     HynickPlayer getPlayer();
 
     /**
-     * This method adds a page to this {@link BookView view}.
-     *
-     * @param page the page
-     */
-
-    void addBook(Book page);
-
-    /**
-     * This method returns the current {@link Book book} in the player's view.
-     *
-     * @return the current book in the view
-     */
-
-    Book current();
-
-    /**
      * This method returns all {@link Book books} this view
      * contains.
      *
      * @return books this view contains
      */
 
-    List<Book> getBooks();
+    List<AbstractBook> getBooks();
+
+    /**
+     * This method returns the {@link InternalBookView} binded
+     * with this {@link BookView}.
+     *
+     * @return the internal view
+     */
+
+    InternalBookView getInternalView();
 
 }

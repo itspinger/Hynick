@@ -28,6 +28,7 @@ package net.pinger.hynick.player;
 import net.pinger.hynick.HynickRecord;
 import net.pinger.hynick.PlayerHynickRecord;
 import net.pinger.hynick.view.BookView;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 
 import javax.annotation.Nonnull;
@@ -143,6 +144,8 @@ public interface HynickPlayer {
      * @return the bukkit instance of the player
      */
 
-    Player bukkit();
+    default Player bukkit() {
+        return Bukkit.getPlayer(this.getId());
+    }
 
 }

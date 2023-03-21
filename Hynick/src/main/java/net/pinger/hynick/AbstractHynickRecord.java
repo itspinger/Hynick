@@ -24,9 +24,9 @@
 
 package net.pinger.hynick;
 
+import net.pinger.disguise.Skin;
 import net.pinger.hynick.rank.Rank;
 import net.pinger.hynick.record.HynickDisguiseRecord;
-import net.pinger.hynick.skin.SkinWrapper;
 
 public abstract class AbstractHynickRecord implements PlayerHynickRecord {
 
@@ -57,12 +57,12 @@ public abstract class AbstractHynickRecord implements PlayerHynickRecord {
     }
 
     @Override
-    public void setSkin(SkinWrapper wrapper) {
+    public void setSkin(Skin wrapper) {
         this.record.setSkin(wrapper);
     }
 
     @Override
-    public SkinWrapper getSkin() {
+    public Skin getSkin() {
         return this.record.getSkin();
     }
 

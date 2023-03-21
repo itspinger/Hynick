@@ -24,8 +24,8 @@
 
 package net.pinger.hynick;
 
+import net.pinger.disguise.Skin;
 import net.pinger.hynick.rank.Rank;
-import net.pinger.hynick.skin.SkinWrapper;
 
 public interface HynickRecord {
 
@@ -63,22 +63,22 @@ public interface HynickRecord {
     String getName();
 
     /**
-     * This method sets the {@link SkinWrapper skin wrapper}
+     * This method sets the {@link Skin skin wrapper}
      * of this disguise.
      *
      * @param wrapper the wrapper
      */
 
-    void setSkin(SkinWrapper wrapper);
+    void setSkin(Skin wrapper);
 
     /**
-     * This method returns the {@link SkinWrapper} wrapper
+     * This method returns the {@link Skin} wrapper
      * of this disguise.
      *
      * @return the skin wrapper
      */
 
-    SkinWrapper getSkin();
+    Skin getSkin();
 
     /**
      * This method overrides whether the disguise is active.

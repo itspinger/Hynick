@@ -30,7 +30,6 @@ import net.md_5.bungee.api.chat.TextComponent;
 
 public class ComponentBuilder {
 
-    // Empty component
     private final BookComponent component = new BookComponent("");
 
     /**

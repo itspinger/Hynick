@@ -25,7 +25,7 @@
 package net.pinger.hynick.book;
 
 
-import net.pinger.hynick.book.simplified.SimplifiedBookPage;
+import net.pinger.hynick.book.internal.InternalBookPage;
 import net.pinger.hynick.view.BookView;
 
 import javax.annotation.Nonnull;
@@ -35,37 +35,39 @@ import java.util.UUID;
 
 public abstract class AbstractBook implements Book {
 
-    protected final List<BookPage> pages = new LinkedList<>();
-    protected final SimplifiedBookPage page;
+    protected final List<BookPage> pages;
+    protected final InternalBookPage page;
     protected final BookView view;
-    private final UUID id = UUID.randomUUID();
+    private final UUID id;
     private boolean viewed = false;
 
     /**
      * This constructor creates a {@link AbstractBook book} from the
-     * {@link SimplifiedBookPage} loaded from the pages.json file.
+     * {@link InternalBookPage} loaded from the pages.json file.
      *
      * <p>
      * This makes it easier for localization of books.
-     * @see SimplifiedBookPage
+     * @see InternalBookPage
      *
      * @param simplifiedPage the simplified page
      */
 
-    protected AbstractBook(BookView view, SimplifiedBookPage simplifiedPage) {
+    protected AbstractBook(BookView view, InternalBookPage simplifiedPage) {
         this.view = view;
         this.page = simplifiedPage;
+        this.pages = new LinkedList<>();
+        this.id = UUID.randomUUID();
     }
 
     /**
-     * This method returns the {@link SimplifiedBookPage simplified page}
+     * This method returns the {@link InternalBookPage simplified page}
      * loaded from the pages.json file.
      *
      * @return the simplified page
      */
 
-    public SimplifiedBookPage getPage() {
-        return page;
+    public InternalBookPage getPage() {
+        return this.page;
     }
 
     /**
@@ -80,7 +82,7 @@ public abstract class AbstractBook implements Book {
 
     @Override
     public boolean isViewed() {
-        return viewed;
+        return this.viewed;
     }
 
     @Override

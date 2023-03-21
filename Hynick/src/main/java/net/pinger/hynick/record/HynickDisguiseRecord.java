@@ -24,15 +24,15 @@
 
 package net.pinger.hynick.record;
 
+import net.pinger.disguise.Skin;
 import net.pinger.hynick.HynickRecord;
 import net.pinger.hynick.rank.Rank;
-import net.pinger.hynick.skin.SkinWrapper;
 
 public class HynickDisguiseRecord implements HynickRecord {
 
     private boolean active;
     private Rank rank;
-    private SkinWrapper wrapper;
+    private Skin wrapper;
     private String name;
 
     @Override
@@ -56,12 +56,12 @@ public class HynickDisguiseRecord implements HynickRecord {
     }
 
     @Override
-    public void setSkin(SkinWrapper wrapper) {
+    public void setSkin(Skin wrapper) {
         this.wrapper = wrapper;
     }
 
     @Override
-    public SkinWrapper getSkin() {
+    public Skin getSkin() {
         return this.wrapper;
     }
 

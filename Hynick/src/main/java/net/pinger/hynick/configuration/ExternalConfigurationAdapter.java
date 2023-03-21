@@ -30,6 +30,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.*;
 import java.util.Map;
+import java.util.logging.Level;
 
 public abstract class ExternalConfigurationAdapter extends HynickFeature {
 
@@ -84,7 +85,7 @@ public abstract class ExternalConfigurationAdapter extends HynickFeature {
             // From the object
             this.configuration.save(this.file);
         } catch (IOException e) {
-            plugin.getLogger().info("Failed to create a file with name " + name);
+            plugin.getLogger().log(Level.INFO, "Failed to create a file with name " + name, e);
         }
     }
 

@@ -24,9 +24,9 @@
 
 package net.pinger.hynick.factory;
 
-import net.pinger.hynick.book.simplified.SimplifiedBookPage;
+import net.pinger.hynick.book.internal.InternalBookPage;
 import net.pinger.hynick.book.BookPage;
-import net.pinger.hynick.view.simplified.SimplifiedBookView;
+import net.pinger.hynick.view.internal.InternalBookView;
 
 public interface BookFactory {
 
@@ -41,7 +41,7 @@ public interface BookFactory {
     void loadPages();
 
     /**
-     * This method saves the default page ({@link SimplifiedBookPage page}) to the pages.json
+     * This method saves the default page ({@link InternalBookPage page}) to the pages.json
      * file.
      *
      * <p>
@@ -51,12 +51,12 @@ public interface BookFactory {
     void saveDefaultPages();
 
     /**
-     * This method returns the {@link SimplifiedBookView simplified view} of
+     * This method returns the {@link InternalBookView simplified view} of
      * the default pages.
      *
      * @return the simplified view
      */
 
-    SimplifiedBookView getSimplifiedView();
+    InternalBookView getSimplifiedView();
 
 }

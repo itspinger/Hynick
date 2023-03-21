@@ -24,32 +24,32 @@
 
 package net.pinger.hynick.view;
 
-import net.pinger.hynick.view.simplified.SimplifiedBookView;
+import net.pinger.hynick.view.internal.InternalBookView;
 
 public abstract class AbstractHynickBookView implements HynickBookView {
 
-    protected final SimplifiedBookView simplifiedView;
+    protected final InternalBookView simplifiedView;
 
     /**
      * This method creates a new {@link BookView} with the specified
-     * {@link SimplifiedBookView simplified book view} to generate the default pages
+     * {@link InternalBookView simplified book view} to generate the default pages
      * from.
      *
      * @param simplifiedView the simplified view
      */
 
-    protected AbstractHynickBookView(SimplifiedBookView simplifiedView) {
+    protected AbstractHynickBookView(InternalBookView simplifiedView) {
         this.simplifiedView = simplifiedView;
     }
 
     /**
-     * This method returns the {@link SimplifiedBookView simplified view}
+     * This method returns the {@link InternalBookView simplified view}
      * for generating default pages.
      *
      * @return the default pages
      */
 
-    public SimplifiedBookView getSimplifiedView() {
+    public InternalBookView getSimplifiedView() {
         return simplifiedView;
     }
 }

@@ -22,13 +22,23 @@
  * SOFTWARE.
  */
 
-package net.pinger.hynick.book.simplified;
+package net.pinger.hynick.book.internal;
 
 import net.pinger.hynick.book.component.BookComponent;
 
 import java.util.Map;
 
-public interface SimplifiedBookPage {
+public interface InternalBookPage {
+
+    /**
+     * This method returns a {@link BookComponent} with the specified
+     * key.
+     *
+     * @param key the key
+     * @return the book component if exists, otherwise null
+     */
+
+    BookComponent getComponent(String key);
 
     /**
      * This method returns a map of components that are mandatory for this page,

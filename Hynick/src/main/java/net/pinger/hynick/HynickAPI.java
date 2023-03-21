@@ -40,10 +40,10 @@ public class HynickAPI {
     }
 
     public static FeatureManager getFeatureManager() {
-        return hynick.getFeatureManager();
+        return HynickAPI.hynick.getFeatureManager();
     }
 
     public static Logger getLogger() {
-        return logger;
+        return HynickAPI.logger;
     }
 }

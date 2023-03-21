@@ -22,23 +22,30 @@
  * SOFTWARE.
  */
 
-package net.pinger.hynick.skin;
+package net.pinger.hynick.view.internal;
 
-public class SkinWrapper {
+import net.pinger.hynick.book.internal.PageType;
+import net.pinger.hynick.book.internal.InternalBookPage;
 
-    private final String signature;
-    private final String value;
+public interface InternalBookView {
 
-    public SkinWrapper(String signature, String value) {
-        this.signature = signature;
-        this.value = value;
-    }
+    /**
+     * This method returns a {@link InternalBookPage} cached within
+     * the specified type.
+     *
+     * @param type the page type
+     * @return the page if exists, otherwise null
+     */
 
-    public String getSignature() {
-        return signature;
-    }
+    InternalBookPage getPage(PageType type);
 
-    public String getValue() {
-        return value;
-    }
+    /**
+     * This method sets the page with the specified type.
+     *
+     * @param type the type
+     * @param page the page
+     */
+
+    void setPage(PageType type, InternalBookPage page);
+
 }

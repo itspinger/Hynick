@@ -56,11 +56,11 @@ public class BookComponent extends BaseComponent {
     }
 
     public String getText() {
-        return text;
+        return this.text;
     }
 
     public boolean isClickable() {
-        return clickable;
+        return this.clickable;
     }
 
     @Override

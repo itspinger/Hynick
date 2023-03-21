@@ -39,18 +39,18 @@ public class Rank {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public String getDisplayName() {
-        return displayName;
+        return this.displayName;
     }
 
     public String getPermission() {
-        return permission;
+        return this.permission;
     }
 
     public String getPrefix() {
-        return prefix;
+        return this.prefix;
     }
 }

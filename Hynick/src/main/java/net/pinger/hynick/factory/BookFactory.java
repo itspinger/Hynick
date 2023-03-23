@@ -57,6 +57,6 @@ public interface BookFactory {
      * @return the simplified view
      */
 
-    InternalBookView getSimplifiedView();
+    InternalBookView getInternalView();
 
 }

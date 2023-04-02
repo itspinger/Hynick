@@ -1,7 +1,4 @@
-<p align = "center">
-    <img src="https://imgur.com/KaSPzmf.png" width="120px" align="right">
-</p>
-
+<img src="https://imgur.com/KaSPzmf.png" width="120px" align="right"></img>
 # Hynick
  
 ### Contributing

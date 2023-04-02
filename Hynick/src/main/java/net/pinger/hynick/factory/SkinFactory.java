@@ -54,6 +54,19 @@ public interface SkinFactory {
     Skin getRandomSkin();
 
     /**
+     * This method returns a random skin out of the 9
+     * default skins introduced in minecraft.
+     * <p>
+     * This method may return null, if the connection to
+     * GitHub servers went wrong.
+     *
+     * @return the default skin
+     */
+
+    @Nullable
+    Skin getRandomDefaultSkin();
+
+    /**
      * This method is used to download the skin packs from both
      * the local machine and a database where base skins are located.
      * <p>

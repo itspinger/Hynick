@@ -1,5 +1,9 @@
-# Hynick
+<p align = "center">
+    <img src="https://imgur.com/KaSPzmf.png" width="100px" height="100px">
+</p>
 
+# Hynick
+ 
 ### Contributing
 
 ### User guide

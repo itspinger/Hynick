@@ -58,7 +58,7 @@ public interface BookManager {
     /**
      * This method creates a new view for this player and opens it.
      * <p>
-     * The view created is a {@link HynickBookView view type}.
+     * The view created is a {@link BookView view type}.
      *
      * @param player the player to apply the view to
      */
@@ -70,11 +70,23 @@ public interface BookManager {
      * id specified in the parameters.
      *
      * @param player the player to open the book for
-     * @param id the id of the player
+     * @param id the id of the book
      * @return true if the operation went successful, false if otherwise.
      */
 
     boolean openBook(HynickPlayer player, UUID id);
 
+    /**
+     * This method opens a {@link Book} with the id equivalent to the
+     * id specified in the parameters with the runnable to run before
+     * the book is actually opened.
+     *
+     * @param player the player to open the book for
+     * @param id the id of the book
+     * @param run the task to run
+     * @return true if the operation went successful, otherwise false
+     */
+
+    boolean openBook(HynickPlayer player, UUID id, Runnable run);
 
 }

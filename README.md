@@ -1,5 +1,5 @@
 <p align = "center">
-    <img src="https://imgur.com/KaSPzmf.png" width="100px" height="100px">
+    <img src="https://imgur.com/KaSPzmf.png" width="120px" align="right">
 </p>
 
 # Hynick

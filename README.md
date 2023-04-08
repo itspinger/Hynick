@@ -1,6 +1,11 @@
+<p align = "center">
+    <img src = "https://img.shields.io/badge/Supports-1.8.8%20--%201.19.4-orange" alt="">
+    <img src = "https://img.shields.io/badge/Easy to Use-00F5FF" alt="Easy to use">
+</p>
+
 <img src="https://imgur.com/KaSPzmf.png" width="120px" align="right"></img>
 # Hynick
-Hynick is a powerful tool for Minecraft server administrators that enables players to disguise themselves using the /nick command. By changing their nickname and skin through a book inventory, similar to the functionality seen on the Hypixel Minecraft server, players can customize their appearance and interact with others on the server in a fun and unique way.
+Hynick is a powerful tool for Minecraft server administrators that enables players to disguise themselves using the /nick command. By changing their nickname and skin through a book inventory, similar to the functionality seen on the **Hypixel** server, players can customize their appearance and interact with others on the server in a fun and unique way.
 
 Overall, the Hynick plugin is an excellent choice for server administrators who aim to provide their players with a distinctive gameplay experience. The /nick command and book inventory feature make it easy for players to personalize their appearance and enhance their engagement with others on the server.
 

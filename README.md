@@ -10,7 +10,7 @@ Hynick is a powerful tool for Minecraft server administrators that enables playe
 Overall, the Hynick plugin is an excellent choice for server administrators who aim to provide their players with a distinctive gameplay experience. The /nick command and book inventory feature make it easy for players to personalize their appearance and enhance their engagement with others on the server.
 
 ### User guide
-- <a href = "">User guide:</a> An instructional guide providing clear steps on how to use this library.
+- <a href = "">User guide:</a> An instructional guide providing clear steps on how to setup this plugin.
 
 ### License
 ```

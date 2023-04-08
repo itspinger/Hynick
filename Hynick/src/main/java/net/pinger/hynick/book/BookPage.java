@@ -42,17 +42,6 @@ public interface BookPage {
     void addComponent(BookComponent... components);
 
     /**
-     * Returns the {@link Book book} this page is a part of.
-     * <p>
-     * This method will never return null, since for a {@link BookPage book page} to exist,
-     * it needs to be a part of a book.
-     *
-     * @return the book
-     */
-
-    Book getBook();
-
-    /**
      * This method returns {@link BookComponent components} that contain
      * the raw data of this page.
      *

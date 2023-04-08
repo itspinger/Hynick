@@ -71,8 +71,11 @@ public class BookComponent extends BaseComponent {
     public TextComponent toComponent() {
         TextComponent component = new TextComponent(this.text);
         component.setClickEvent(this.getClickEvent());
+        component.setBold(this.isBold());
+        component.setItalic(this.isItalic());
+        component.setUnderlined(this.isUnderlined());
+        component.setObfuscated(this.isObfuscated());
         component.setHoverEvent(this.getHoverEvent());
         return component;
     }
-
 }
